@@ -41,8 +41,8 @@ function supprItem() {
 
 }
 
-deleteItem.addEventListener('click', supprItem())
-modifItem.addEventListener('click', updateItem())
+//deleteItem.addEventListener('click', supprItem())
+//modifItem.addEventListener('click', updateItem())
 
 function updateItem() {
 
