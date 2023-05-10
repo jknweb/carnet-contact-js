@@ -48,7 +48,7 @@ function renderListView() {
 
         <div class="contact-item d-flex" onclick ="showmore(this)">
               <div class="profile">
-                <img src="/images/profile.png" width="100px" alt="" class="img-fluid rounded-circle bg-dark"/>
+                <img src="https://jknweb.github.io/carnet-contact-js/images/profile.png" width="100px" alt="" class="img-fluid rounded-circle bg-dark"/>
               </div>
               <div class="info flex-grow-1 ms-3">
                 <h2 class="h4 contact-name">${contact.nom} ${contact.prenom}</h2>
