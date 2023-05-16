@@ -43,29 +43,29 @@ form.addEventListener("submit", (e) => {
 function renderListView() {
   listItem.innerHTML = "";
 
-  for (const contact of contacts) {
+  for (let i = 0; i < contacts.length; i++) {
     let temp = `
 
         <div class="contact-item d-flex" onclick ="showmore(this)">
               <div class="profile">
-                <img src="https://jknweb.github.io/carnet-contact-js/images/profile.png" width="100px" alt="" class="img-fluid rounded-circle bg-dark"/>
+                <img src="/images/profile.png" width="100px" alt="" class="img-fluid rounded-circle bg-dark"/>
               </div>
               <div class="info flex-grow-1 ms-3">
-                <h2 class="h4 contact-name">${contact.nom} ${contact.prenom}</h2>
+                <h2 class="h4 contact-name">${contacts[i].nom} ${contacts[i].prenom}</h2>
                 <p class="m-0"></p>
-                <p class="m-0">${contact.pays}</p>
-                <p class="m-0">${contact.genre} </p>
-                <p class="m-0 more d-none">${contact.email}</p>
-                <p class="m-0 more d-none">${contact.telephone}</p>
-                <p class="m-0 more d-none">${contact.DateNaiss} ans</p>
+                <p class="m-0">${contacts[i].pays}</p>
+                <p class="m-0">${contacts[i].genre} </p>
+                <p class="m-0 more d-none">${contacts[i].email}</p>
+                <p class="m-0 more d-none">${contacts[i].telephone}</p>
+                <p class="m-0 more d-none">${contacts[i].DateNaiss} ans</p>
                 
               </div>
 
               <div class="actions">
-                <button class="btn btn-secondary">
+                <button class="btn btn-secondary" onclick="editContact(${i} )">
                   <i class="bi bi-pencil-square"></i>
                 </button>
-                <button class="btn btn-danger">
+                <button class="btn btn-danger" onclick="deleteContact(${i} )">
                   <i class="bi bi-trash"></i>
                 </button>
               </div>
@@ -74,6 +74,18 @@ function renderListView() {
             listItem.innerHTML +=temp
   }
   
+}
+
+function deleteContact(i) {
+  contacts.splice(i, 1)
+
+  renderListView();
+}
+
+function editContact(i) {
+  let contact = contacts[i];
+
+  renderListView();
 }
 
 function showmore(e) {
