@@ -1,0 +1,114 @@
+* {
+    padding : 0px;
+    margin : 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+body {
+    
+}
+
+.container {
+    padding : 25px;
+    width : 80%;
+    margin : 0 auto;
+}
+
+.title {
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    width : 50%;
+    margin-bottom: 20px;
+}
+
+.list-contacts {
+    width : 50%;
+    border-right : solid rgb(66, 65, 65) 1px;
+}
+
+.formulaireSaisie {
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex : 1;
+    margin-left: 25px;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    display:flex;
+    flex-direction: column;
+    
+}
+.actions {
+    display:flex;
+    margin-right: 10px;;
+}
+.profile img{
+    margin-right : 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.inputStyle input, select {
+    padding : 5px;
+    margin : 1px 0px 10px 0px;
+    --input-focus: 245 100% 42%;
+    border-radius: 5px;
+    width : 100%;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+.inputStyle input:focus {
+
+    border-color: #0276FF;
+    box-shadow: 0 0 0 3px hsl(245 100% calc(42% + 40%)/ .8);
+    outline: 3px solid transparent;
+    
+    }
+
+.btn {
+    padding : 5px ;
+    border-radius: 3px;
+    
+}
+
+section {
+    display: flex;
+}
+
+
+/* CSS */
+.btn {
+  align-items: center;
+  appearance: button;
+  background-color: #0276FF;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+ 
+  color: #fff;
+
+  font-family: "Montserrat";
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 20px;
+  text-align: center;
+
+}
+
+.button-22:active {
+  background-color: #006AE8;
+}
+
+.button-22:hover {
+  background-color: #1C84FF;
+}
+

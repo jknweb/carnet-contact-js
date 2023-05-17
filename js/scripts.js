@@ -4,16 +4,17 @@ let btnSubmit = document.getElementById("btn-submit");
 let listItem = document.getElementById("list-item");
 let annuler = document.getElementById("annuler");
 
+
 let contacts = [];
 
 btnAjout.addEventListener("click", (e) => {
   btnAjout.classList.toggle("d-none");
-  form.classList.toggle("d-none");
+  form.classList.toggle("display");
 });
 
 annuler.addEventListener("click", (e) => {
   btnAjout.classList.toggle("d-none");
-  form.classList.toggle("d-none");
+  form.style.display.toggle(".formulaireSaisie")
 });
 
 // Ajout des contacts
@@ -22,6 +23,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let data = new FormData(e.target);
+  //let avatarImg = document.getElementById('avatar')
+  //let avatar = document.createElement('img')
+  
   //let timestamp = Date.parse(data.DateNaiss);
   //let dateBirth = new Date(timestamp);
 
@@ -31,9 +35,8 @@ form.addEventListener("submit", (e) => {
     'pays': data.get("pays"),
     'genre': data.get("genre"),
     'email': data.get("email"),
-    'telephone': data.get("fone")
-    //'age': (new Date().getFullYear()) - (dateBirth.getFullYear())
-    //'avatar' : data.get('avatar')
+    'telephone': data.get("fone"),
+   // 'avatar' : avatar.src = url.createObjectUrl(data.get('avatarImg')
   };
 
   contacts.push(contact);
